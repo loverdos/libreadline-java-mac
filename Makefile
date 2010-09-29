@@ -27,6 +27,8 @@
 # $Revision: 1.18 $
 #
 
+JAVA_HOME = /Library/Java/Home
+
 TARGET    = libreadline-java
 README    = README README.1st
 NEWS      = NEWS
@@ -58,7 +60,7 @@ T_LIBS    = JavaReadline
 
 # Operating system dependent
 JAVAINCLUDE       = $(JAVA_HOME)/include
-JAVANATINC        = $(JAVA_HOME)/include/linux
+JAVANATINC        = $(JAVA_HOME)/include
 
 ifeq (MSC,$(WIN32))
 JAVA_HOME := c:/j2sdk1.4.0
@@ -140,7 +142,7 @@ rpm: src-dist
 	rpm --define _topdir$(RPM_BASE) -ba $(RPM_BASE)/SPECS/libreadline-java.spec
 
 test: $(JAR) build-native
-	LD_LIBRARY_PATH=. java -jar $(JAR) src/test/tinputrc $(ARGS)
+	DYLD_LIBRARY_PATH=. java -jar $(JAR) src/test/tinputrc $(ARGS)
 
 clean:
 	$(MAKE) -C src/native clean

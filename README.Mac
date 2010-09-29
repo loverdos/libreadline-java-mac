@@ -1,0 +1,12 @@
+In order to compile for the Mac, I have followed the instructions of Nathan Toone from
+
+http://blog.toonetown.com/2006/07/java-readline-on-mac-os-x-update.html
+
+with a few modifications for the -isysroot (Snow Leopard) and the architecture (Intel 64bit).
+
+All the credit for Mac cooking goes to Nathan.
+
+I originally needed the library for the HenPlus SQL-shell (http://henplus.sourceforge.net/)
+
+Have fun
+Christos KK Loverdos

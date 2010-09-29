@@ -95,7 +95,7 @@ JNIEXPORT void JNICALL Java_org_gnu_readline_Readline_initReadlineImpl
      rl_readline_name = strdup("JAVA");
    if (is_copy == JNI_TRUE)
     (*env)->ReleaseStringUTFChars(env, jappName, appName);
-#ifdef JavaReadline
+#if defined JavaReadline && !defined MAC_OS
    rl_catch_signals = 0; // don't install signal handlers in JNI code.
 #endif
 #ifndef JavaGetline
@@ -111,7 +111,7 @@ JNIEXPORT void JNICALL Java_org_gnu_readline_Readline_initReadlineImpl
 #ifndef JavaGetline
 JNIEXPORT void JNICALL Java_org_gnu_readline_Readline_cleanupReadlineImpl
                               (JNIEnv *env, jclass theClass) {
-#ifdef JavaReadline
+#if defined JavaReadline && !defined MAC_OS
     rl_free_line_state();
     rl_cleanup_after_signal();
 #endif
@@ -210,10 +210,10 @@ JNIEXPORT void JNICALL Java_org_gnu_readline_Readline_getHistoryImpl
   jclass cls;
   jmethodID mid;
   jstring jline;
-#ifdef JavaReadline
+#if defined JavaReadline && !defined MAC_OS
   HIST_ENTRY **hist;
 #endif
-#ifdef JavaEditline
+#if defined JavaEditline || defined MAC_OS
   HIST_ENTRY *histSingle;
   int pos;
 #endif
@@ -221,7 +221,7 @@ JNIEXPORT void JNICALL Java_org_gnu_readline_Readline_getHistoryImpl
   cls = (*env)->GetObjectClass(env,jcoll);
   mid = (*env)->GetMethodID(env,cls,"add","(Ljava/lang/Object;)Z");
 
-#ifdef JavaReadline
+#if defined JavaReadline && !defined MAC_OS
   hist = history_list();
   if (hist != NULL) {
     while (*hist != NULL) {
@@ -232,7 +232,7 @@ JNIEXPORT void JNICALL Java_org_gnu_readline_Readline_getHistoryImpl
   }
 #endif
 
-#ifdef JavaEditline
+#if defined JavaEditline || defined MAC_OS
   for (pos = 0; pos < history_length; pos++) {
     histSingle = history_get(pos + 1);
     if (histSingle) {
@@ -472,7 +472,7 @@ JNIEXPORT void JNICALL Java_org_gnu_readline_Readline_setCompleterImpl
       rl_completion_entry_function = NULL;
       return;
     }
-#ifdef JavaEditline
+#if defined JavaEditline || defined MAC_OS
     rl_completion_entry_function = (CPFunction *) java_completer;
 #else
     rl_completion_entry_function = (rl_compentry_func_t *) java_completer;
