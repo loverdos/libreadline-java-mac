@@ -1,0 +1,103 @@
+This is my "port" of GNU-Readline to Java. Actually, it is a crude wrapper 
+using the Java Native Interface (JNI).
+
+Starting from version 0.6, alternative libraries are supported. Currently
+only Editline is implemented, but adding support for other implementations
+should be easy. 
+From 0.6 on, JavaReadline also has a fallback solution (System.in) for
+platforms without Readline or Editline support, making your programs portable
+again.
+
+This version implements basic readline functionality like line editing and
+filename completion, which should be just enough for normal use. Not all
+functionality is available with all implementations.
+
+Various people contributed code (see the file NEWS for details).
+Since I changed some of the code, all bugs are my fault and bugreports
+should be adressed to me.
+
+The binary distribution contains the API documentation, a JAR with the
+Readline class and the shared library libJavaReadline.so.
+
+The source distribution contains all the source (I hope this doesn't surprise
+you ;-) and a system of makefiles. You need the JDK to compile it.
+
+
+LICENSING ISSUES
+================
+
+Although JavaReadline is distributed under the LGPL, the underlying
+Readline library is GPL code. The consequence is, that any program
+linking with JavaReadline+Readline, will fall under the GPL.
+
+There is a Readline replacement called Editline with a more liberal
+license. Use that library if you want to distribute your program
+under the LGPL instead of the GPL.
+
+You can fetch the Editline stuff at http://packages.debian.org. You
+need libedit2 and libedit-dev. Source code is also available, although
+I must admit I did not succeed in compiling it on my non-BSD and
+non-Debian system :-(
+
+A second Readline replacement is called Getline. This is a very minimal
+Readline-clone with a liberal license, and the source-code is provided
+in the java-readline distribution. It has the advantage that it
+compiles natively on Windows.
+
+
+COMPILATION
+===========
+
+Compilation should be no problem. Try "make". You should set the
+variable JAVA_HOME (or edit the makefile). Also, if you don't use jikes,
+you should change the variables JAVAC and JAVAC_OPT in the makefile. A better
+alternative is to install jikes, it will speed up your development by
+a factor of 2-3.
+JAVAC and JAVAC_OPT can also be set in the environment or from the
+make commandline.
+
+If you want Editline support, use "make T_LIBS=JavaEditline". Getline support
+is selected with "make T_LIBS=JavaGetline".
+
+Getline support is also available for (native) WIN32. To build it from
+source, you need the cygwin-environment (only necessary because we still
+use GNU-make) and a native C-compiler. All necessary variables are configured
+in the toplevel Makefile. Before running make, set the WIN32-variable to MSC:
+
+> WIN32=MSC make
+
+A ready-to-use DLL is in the contrib/win32 directory. Since this feature
+is experimental, your feedback is appreciated. If you figure out how to
+link JavaReadline with cygwin, please let me know as well (some stubs
+are already built into the makefiles).
+
+
+INSTALLATION
+============
+
+Copy the files libJava*.so to one of your library directories or add
+the directory where you put libJava*.so to LD_LIBARY_PATH. Also, add
+java_readline.jar to your CLASSPATH. After building the jar and the shared
+library, you can run a program with something like:
+
+LD_LIBRARY_PATH=/usr/lib java -cp java_readline.jar org.foo.bar.MyClass
+
+assuming that you put libJava*.so into /usr/lib.
+
+
+DEBIAN
+======
+
+Thanks to Ben Burton, Debian-packages for JavaReadline are available!
+
+
+SUPPORT
+=======
+
+If you think you found a bug or want to contribute some code please drop 
+me a note.
+
+Bernhard Bablok
+mail@bablokb.de
+http://www.bablokb.de
+

@@ -1,0 +1,23 @@
+To use JavaReadline with BeanShell, you must replace one class
+(bsh.Interpreter) in bsh.jar and add another one (bsh.bshCompleter).
+
+The sourcecode for both files is provided in this package. Just
+compile both files and use the jar utility from the JDK. Note that the
+1.2 version has an update flag (this makes things easier). With 1.1
+you have to extract the whole archive, replace the given class files
+and create the archive again.
+
+(This readme was shamelessly stolen and modified with little more than
+substitution tricks from the jpython mod for readline.)
+
+-Shane Celis <shane@terraspring.com>
+
+
+Note: starting from JavaReadline 0.6, you have the choice of various backing
+readline implementations. Since the license of BSH does not conform to the
+GPL, it cannot be used together with GNU-Readline.
+As a consequence, the backing implementation for BeanShell is Editline,
+and I modified ReadlineReader, Interpreter.java and Interpreter.java.diff
+accordingly.
+
+Bernhard

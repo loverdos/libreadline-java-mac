@@ -1,0 +1,10 @@
+Note: JPython is now Jython, and there have been
+some changes, so the original description of what
+to do to make Jython work with JavaReadline
+does not apply anymore. 
+
+However, there has been a posting to the jython-users 
+mailing-list describing what to do (see the file
+jython-install.txt). For Debian-users, things should
+be much simpler, because Jython is already packaged
+to use JavaReadline with EditLine as backing library.

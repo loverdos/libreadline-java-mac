@@ -1,0 +1,521 @@
+2003-01-07  Bernhard Bablok  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/misc/release-checklist.txt:
+	added item '0. Change version numbers'
+
+	* /cvsroot/java-readline/java-readline/etc/libreadline-java.spec,
+	/cvsroot/java-readline/java-readline/web/index.html:
+	updated version number to 0.8.0
+
+2002-12-17  Bernhard Bablok  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/src/native/Makefile:
+	bugfix: only add -lcygwin if MSC=cygwin
+
+2002-11-24  Bernhard Bablok  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/contrib/jscheme/SilkCompleter.java,
+	/cvsroot/java-readline/java-readline/contrib/win32/JavaGetline.dll:
+	initial entry
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	minor code cleanups
+
+	* /cvsroot/java-readline/java-readline/src/native/getline.h:
+	bugfix: moved #defines outside #if __STDC__ > 0
+
+	* /cvsroot/java-readline/java-readline/src/native/Makefile,
+	/cvsroot/java-readline/java-readline/src/native/org_gnu_readline_Readline.c:
+	added support for WIN32
+
+	* /cvsroot/java-readline/java-readline/NEWS: news for version 0.8.0
+
+	* /cvsroot/java-readline/java-readline/VERSION:
+	upgraded version number to 0.8.0
+
+	* /cvsroot/java-readline/java-readline/README: describe WIN32 support
+
+	* /cvsroot/java-readline/java-readline/Makefile:
+	added support for WIN32
+
+2002-11-02  Bernhard Bablok  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/etc/libreadline-java.spec,
+	/cvsroot/java-readline/java-readline/Makefile:
+	updated HOMEPAGE-Url
+
+	* /cvsroot/java-readline/java-readline/README: added note about Getline
+
+2002-10-28  Bernhard Bablok  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/src/native/org_gnu_readline_Readline.c:
+	fixed implementation of getHistoryImpl for Editline (patch from Ben Burton)
+
+2002-10-15  Bernhard Bablok  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	- enable history-methods for editline
+	- added javadoc-comments stating which method is supported by
+	  which backing implementation
+
+	* /cvsroot/java-readline/java-readline/src/native/org_gnu_readline_Readline.c:
+	fix typecast for java_completer (patch provided by Ben Burton)
+
+	* /cvsroot/java-readline/java-readline/Makefile:
+	group documentation into packages (patch provided by Ben Burton)
+
+2002-08-12  Bernhard Bablok  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/web/index.html:
+	added XNap as project using Java-Readline
+
+	* /cvsroot/java-readline/java-readline/web/index.html:
+	- changed address of henplus
+	- fixed relative URLs to absolute URLs for JYTHON and BeanShell
+
+2002-06-25  Bernhard Bablok  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/Makefile,
+	/cvsroot/java-readline/java-readline/src/native/Makefile,
+	/cvsroot/java-readline/java-readline/src/native/org_gnu_readline_Readline.c,
+	/cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java,
+	/cvsroot/java-readline/java-readline/src/org/gnu/readline/ReadlineLibrary.java:
+	integrated getline
+
+	* /cvsroot/java-readline/java-readline/src/native/getline.c,
+	/cvsroot/java-readline/java-readline/src/native/getline.h:
+	initial entry
+
+	* /cvsroot/java-readline/java-readline/VERSION:
+	changed version to 0.7.4
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	bugfix: too many braces
+
+2002-06-07  Bernhard Bablok  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	integrated encoding-patch
+
+2002-05-27  Bernhard Bablok  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/misc/release-checklist.txt:
+	initial entry
+
+	* /cvsroot/java-readline/java-readline/etc/libreadline-java.spec:
+	added NEWS to %doc
+
+	* /cvsroot/java-readline/java-readline/NEWS,
+	/cvsroot/java-readline/java-readline/web/index.html:
+	prepared release 0.7.3
+
+2002-05-11  Bernhard Bablok  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/src/native/org_gnu_readline_Readline.c:
+	changed implementation of utf2ucs and ucs2utf
+
+	* /cvsroot/java-readline/java-readline/Makefile: added variable NEWS
+
+	* /cvsroot/java-readline/java-readline/README:
+	changed reference to ChangeLog to NEWS
+
+	* /cvsroot/java-readline/java-readline/ChangeLog: moved to NEWS
+
+	* /cvsroot/java-readline/java-readline/NEWS: initial entry
+
+2002-05-09  hzeller  <henner@freiheit.com>
+
+	* /cvsroot/java-readline/java-readline/etc/libreadline-java.spec, /cvsroot/java-readline/java-readline/Makefile:
+	o build RPM in own build directory. Don't need to be root to do so.
+
+2002-05-02  Bernhard Bablok  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/web/index.html:
+	added Sourceforge logo
+
+	* /cvsroot/java-readline/java-readline/web/index.html: initial entry
+
+2002-04-30  Bernhard Bablok  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	fixed bugs in Readline.readline(...) functions
+
+2002-04-24  hzeller  <henner@freiheit.com>
+
+	* /cvsroot/java-readline/java-readline/VERSION, /cvsroot/java-readline/java-readline/etc/libreadline-java.spec:
+	o bump version to 0.7.3 .. the future release.
+
+2002-04-15  hzeller  <henner@freiheit.com>
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java, /cvsroot/java-readline/java-readline/src/native/org_gnu_readline_Readline.c:
+	o don't add history automatically for each line. Provided by Brian Clapper.
+
+2002-03-11  hzeller  <henner@freiheit.com>
+
+	* /cvsroot/java-readline/java-readline/etc/libreadline-java.spec, /cvsroot/java-readline/java-readline/ChangeLog, /cvsroot/java-readline/java-readline/VERSION:
+	o 0.7.2 - first release for sourceforge.
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java, /cvsroot/java-readline/java-readline/etc/libreadline-java.spec, /cvsroot/java-readline/java-readline/Makefile:
+	o small modifications for first JavaReadline release on sourceforge.
+
+	* /cvsroot/java-readline/java-readline/etc/libreadline-java.spec:
+	o add spec file.
+
+2002-03-03  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/Makefile, /cvsroot/java-readline/java-readline/etc/Makefile, /cvsroot/java-readline/java-readline/src/Makefile, /cvsroot/java-readline/java-readline/src/mkrules.inc, /cvsroot/java-readline/java-readline/src/native/Makefile, /cvsroot/java-readline/java-readline/src/org/Makefile, /cvsroot/java-readline/java-readline/src/org/gnu/Makefile, /cvsroot/java-readline/java-readline/src/org/gnu/readline/Makefile:
+	switched to new build-system
+
+	* /cvsroot/java-readline/java-readline/src/native/org_gnu_readline_Readline.c:
+	- make cleanupReadlineImpl only for JavaReadline available
+	- added hasTerminalImpl
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	- added method hasTerminal()
+	- added method hasTerminalImpl()
+
+	* /cvsroot/java-readline/java-readline/ChangeLog:
+	release notes for 0.7.1
+
+	* /cvsroot/java-readline/java-readline/VERSION:
+	changed version to 0.7.1
+
+2002-01-19  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/VERSION:
+	changed version to 0.7.0
+
+	* /cvsroot/java-readline/java-readline/ChangeLog:
+	release notes for 0.7.0
+
+2002-01-01  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/TODO:
+	removed todo-item about JPython/Jython
+
+	* /cvsroot/java-readline/java-readline/contrib/jpython/jython-install.txt:
+	Initial entry
+
+	* /cvsroot/java-readline/java-readline/contrib/jpython/README:
+	updated the file to point to jython-install.txt
+
+2001-12-27  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	- bugfix: setCompleter(null) crashed the virtual machine
+	- added methods cleanup(), getLineBuffer() and the respective *Impl methods
+	- improved documentation
+
+	* /cvsroot/java-readline/java-readline/src/native/org_gnu_readline_Readline.c:
+	- added cleanupReadlineImpl and getLineBufferImpl (provided by Henner Zeller)
+	- minor code cleanup (provided by Henner Zeller)
+
+	* /cvsroot/java-readline/java-readline/src/test/ReadlineTest.java:
+	- added Readline.cleanup() code
+	- minor changes to main input loop
+
+	* /cvsroot/java-readline/java-readline/README:
+	added note about Debian-packages
+
+	* /cvsroot/java-readline/java-readline/Makefile:
+	removed option -private from call to javadoc
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/ReadlineCompleter.java:
+	Initial entry
+
+2001-12-15  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/ChangeLog:
+	correct version is 0.6.1, not 0.61
+
+	* /cvsroot/java-readline/java-readline/VERSION:
+	changed version to 0.6.1
+
+	* /cvsroot/java-readline/java-readline/VERSION: changed version to 0.61
+
+	* /cvsroot/java-readline/java-readline/ChangeLog:
+	release notes for 0.61
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	bugfix: fallback-solution did not throw EOFException
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/ReadlineLibrary.java:
+	bugfix: missing P ("ureJava") in method byName
+
+2001-10-12  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/VERSION: changed version to 0.6
+
+	* /cvsroot/java-readline/java-readline/TODO:
+	removed all TODO-items finished for 0.6
+
+	* /cvsroot/java-readline/java-readline/contrib/bsh/Interpreter.java.diff:
+	added ReadlineLibrary argument to constructor of ReadlineReader
+
+	* /cvsroot/java-readline/java-readline/src/native/Makefile:
+	reorganized dependencies and rules
+
+	* /cvsroot/java-readline/java-readline/contrib/bsh/README:
+	added note about changes due to the new post 0.6-features
+
+	* /cvsroot/java-readline/java-readline/contrib/bsh/Interpreter.java:
+	added ReadlineLibrary argument to constructor of ReadlineReader
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/ReadlineReader.java:
+	added ReadlineLibrary argument to all constructors
+
+2001-09-08  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/src/test/ReadlineTest.java:
+	implemented switching of backing libraries
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/ReadlineLibrary.java:
+	implemented byName() method
+
+	* /cvsroot/java-readline/java-readline/TODO: TODO-status as of 0.6pre1
+
+	* /cvsroot/java-readline/java-readline/VERSION:
+	changed version to 0.6pre1
+
+	* /cvsroot/java-readline/java-readline/ChangeLog: release notes for 0.6
+
+	* /cvsroot/java-readline/java-readline/Makefile: - added README.1st
+	- bugfix: use $(shell ls *.so) instead of $(wildcard *.so)
+	- reorganized BIN_ADD and SRC_ADD
+
+	* /cvsroot/java-readline/java-readline/README.1st: Initial entry
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	added EOFException explicitly to readline()
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	added more comments
+
+	* /cvsroot/java-readline/java-readline/README: updated to 0.6
+
+	* /cvsroot/java-readline/java-readline/contrib/jpython/ReadlineConsole.java:
+	updated to reflect new methods since 0.6
+
+	* /cvsroot/java-readline/java-readline/src/native/Makefile:
+	changed -D in compilation of org_gnu_readline_Readline.c
+	(just define library-name, don't define a value)
+
+	* /cvsroot/java-readline/java-readline/Makefile:
+	added support for Editline
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	readInitFile() and parseAndBind() are only support by GnuReadline
+
+	* /cvsroot/java-readline/java-readline/src/native/org_gnu_readline_Readline.c:
+	added #defines for JavaReadline/JavaEditline
+
+	* /cvsroot/java-readline/java-readline/src/native/Makefile:
+	generalized makefile to support various readline implementations
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	replaced UnsupportedMethodError with standard UnsupportedOperationException
+
+	* /cvsroot/java-readline/java-readline/src/test/ReadlineTest.java:
+	method setThrowErrorOnUnsupportedMethod() changed to
+	setThrowExceptionOnUnsupportedMethod()
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Makefile:
+	removed dependency of Readline to UnsupportedMethodError
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/UnsupportedMethodError.java:
+	replaced with UnsupportedOperationException
+
+2001-09-07  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/src/native/org_gnu_readline_Readline.c:
+	added rl_initialize() to initReadlineImpl
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Makefile:
+	added dependency of Readline to UnsupportedMethodError
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	- bugfix: make [gs]etThrowErrorOnUnsupportedMethod() static
+	- throw error from all unsupported methods if throw-flag is true
+
+	* /cvsroot/java-readline/java-readline/src/test/ReadlineTest.java:
+	added call to Readline.setThrowErrorOnUnsupportedMethod(true);
+
+	* /cvsroot/java-readline/java-readline/VERSION: upgraded version to 0.6
+
+	* /cvsroot/java-readline/java-readline/src/test/ReadlineTest.java:
+	added call to Readline.load(ReadlineLibrary.GnuReadline)
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	added some comments to load()
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	- added field iThrowError
+	- added methods getThrowErrorOnUnsupportedMethod() and
+	  setThrowErrorOnUnsupportedMethod()
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/UnsupportedMethodError.java, /cvsroot/java-readline/java-readline/src/org/gnu/readline/ReadlineLibrary.java:
+	Initial entry
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	- made all native methods private and renamed to *Impl
+	- implemented simple fallback solution
+
+	* /cvsroot/java-readline/java-readline/src/test/ReadlineTest.java:
+	catch IOException instead of EOFException
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Makefile:
+	added dependency of Readline to ReadlineLibrary
+
+	* /cvsroot/java-readline/java-readline/src/native/org_gnu_readline_Readline.c:
+	renamed installCompleterImpl to setCompleterImpl
+
+	* /cvsroot/java-readline/java-readline/src/native/org_gnu_readline_Readline.c:
+	added Impl to all native methods
+
+2001-09-02  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/Makefile:
+	added contrib to SRC_ADD
+
+	* /cvsroot/java-readline/java-readline/Makefile:
+	changed to tar.bz2 archives
+
+2001-08-27  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/ChangeLog:
+	added author of word break patch
+
+2001-08-26  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/VERSION: added ReadlineReader
+
+	* /cvsroot/java-readline/java-readline/ChangeLog:
+	release notes for 0.5.2
+
+	* /cvsroot/java-readline/java-readline/TODO: added a few todo-items
+
+	* /cvsroot/java-readline/java-readline/README:
+	added section about LICENSING ISSUES
+
+	* /cvsroot/java-readline/java-readline/contrib/jpython/README:
+	added a note about JPython <-> Jython
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/ReadlineReader.java:
+	Initial entry
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	added javadoc comments to getWordBreakCharacters() and setWordBreakCharacters()
+
+	* /cvsroot/java-readline/java-readline/contrib/bsh/BshCompleter.java, /cvsroot/java-readline/java-readline/contrib/bsh/Interpreter.java, /cvsroot/java-readline/java-readline/contrib/bsh/Interpreter.java.diff, /cvsroot/java-readline/java-readline/contrib/bsh/README:
+	Initial entry
+
+	* /cvsroot/java-readline/java-readline/ChangeLog: log entry for 0.5.1
+
+	* /cvsroot/java-readline/java-readline/VERSION, /cvsroot/java-readline/java-readline/src/native/org_gnu_readline_Readline.c, /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java, /cvsroot/java-readline/java-readline/src/test/ReadlineTest.java:
+	added word break patch
+
+2001-03-18  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Makefile, /cvsroot/java-readline/java-readline/src/org/gnu/Makefile, /cvsroot/java-readline/java-readline/src/org/Makefile, /cvsroot/java-readline/java-readline/src/test/Makefile:
+	added copyright header
+
+	* /cvsroot/java-readline/java-readline/etc/Makefile:
+	removed reference to RRSystem
+
+	* /cvsroot/java-readline/java-readline/ChangeLog: release notes for 0.5
+
+	* /cvsroot/java-readline/java-readline/README: upgraded text to 0.5
+
+	* /cvsroot/java-readline/java-readline/TODO:
+	removed custom completers from TODO list
+
+	* /cvsroot/java-readline/java-readline/Makefile:
+	- added $(APIDIR) to BIN_ADD
+	- added $(BIN_ADD) to target bin-dist
+	- updated target clean
+
+	* /cvsroot/java-readline/java-readline/VERSION:
+	upgraded version number to 0.5
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	added additional methods: readHistoryFile(), writeHistoryFile(),
+	setCompleter(), getCompleter(), installCompleter()
+
+	* /cvsroot/java-readline/java-readline/src/test/ReadlineTest.java:
+	added code for new functions
+
+	* /cvsroot/java-readline/java-readline/src/native/org_gnu_readline_Readline.c:
+	added code for readHistoryFile, writeHistoryFile and installCompleter
+
+	* /cvsroot/java-readline/java-readline/src/test/TestCompleter.java:
+	Initial entry
+
+	* /cvsroot/java-readline/java-readline/src/test/Makefile:
+	added dependency TestCompleter of ReadlineTest
+
+2001-03-17  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/VERSION: Initial entry
+
+	* /cvsroot/java-readline/java-readline/src/native/org_gnu_readline_Readline.c, /cvsroot/java-readline/java-readline/src/test/ReadlineTest.java:
+	changed copyright
+
+	* /cvsroot/java-readline/java-readline/src/test/ReadlineTest.java, /cvsroot/java-readline/java-readline/src/org/gnu/readline/Readline.java:
+	changed mail adress
+
+	* /cvsroot/java-readline/java-readline/README: - merged INSTALL
+	- minor changes in wording
+
+	* /cvsroot/java-readline/java-readline/ChangeLog:
+	added release notes for release 0.4.3
+
+	* /cvsroot/java-readline/java-readline/Makefile:
+	rewrote makefile for new structure
+
+	* /cvsroot/java-readline/java-readline/INSTALL: merged with README
+
+	* /cvsroot/java-readline/java-readline/src/native/Makefile:
+	added $(SO) to rm statement in target clean
+
+	* /cvsroot/java-readline/java-readline/etc/Makefile, /cvsroot/java-readline/java-readline/etc/manifest.stub:
+	Initial entry
+
+	* /cvsroot/java-readline/java-readline/src/native/Makefile:
+	changed target directory for shared library
+
+	* /cvsroot/java-readline/java-readline/src/test/ReadlineTest.java:
+	- moved import-statements before class definition
+	- added javadoc comments about main-method
+
+	* /cvsroot/java-readline/java-readline/src/test/ReadlineTest.java:
+	made init-file an argument
+
+	* /cvsroot/java-readline/java-readline/src/native/Makefile:
+	ignore error from rm in target clean
+
+	* /cvsroot/java-readline/java-readline/src/native/Makefile:
+	new structure
+
+	* /cvsroot/java-readline/java-readline/src/Makefile, /cvsroot/java-readline/java-readline/src/mkrules.inc:
+	added target clean
+
+	* /cvsroot/java-readline/java-readline/src/test/ReadlineTest.java:
+	added package statement
+
+	* /cvsroot/java-readline/java-readline/src/org/gnu/readline/Makefile, /cvsroot/java-readline/java-readline/src/org/gnu/Makefile, /cvsroot/java-readline/java-readline/src/org/Makefile, /cvsroot/java-readline/java-readline/src/test/Makefile, /cvsroot/java-readline/java-readline/src/Makefile, /cvsroot/java-readline/java-readline/src/mkrules.inc, /cvsroot/java-readline/java-readline/COPYING.LIB:
+	Initial entry
+
+2001-03-04  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/contrib/jpython/ReadlineConsole.java:
+	bugfix: deal with prompt==null in raw_input()
+
+2000-09-18  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/contrib/jpython/README, /cvsroot/java-readline/java-readline/contrib/jpython/ReadlineConsole.java, /cvsroot/java-readline/java-readline/contrib/jpython/jpython.java, /cvsroot/java-readline/java-readline/contrib/jpython/jpython.diff:
+	Initial entry
+
+2000-05-01  Bablokb  <mail@bablokb.de>
+
+	* /cvsroot/java-readline/java-readline/src/native/Makefile:
+	changed JAVANATINC to jdk 1.2 standard
