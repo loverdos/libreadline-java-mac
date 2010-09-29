@@ -45,8 +45,8 @@ LIB_EXT := dll
 CFLAGS=-DWIN32=$(WIN32) -D__IBMC__
 else
 INCLUDES          = -I $(JAVAINCLUDE) -I $(JAVANATINC)
-LIBPATH           = -L/usr/lib/termcap 
-JavaReadline_LIBS = -lreadline -ltermcap -lhistory
+LIBPATH           =
+JavaReadline_LIBS = -lreadline -ltermcap
 JavaEditline_LIBS = -ledit -ltermcap
 ifeq (cygwin,$(WIN32))
 JavaGetline_LIBS = -lcygwin
@@ -55,7 +55,7 @@ CC = gcc
 OBJ_EXT := o
 LIB_PRE := lib
 LIB_EXT := so
-CFLAGS=-fPIC -DPOSIX
+CFLAGS=-isysroot /Developer/SDKs/MacOSX10.6.sdk/ -arch x86_64 -fno-common -DMAC_OS
 endif
 
 
@@ -97,7 +97,7 @@ ifeq (CYGWIN,$(WIN32))
 	$(CC) -W1,$(ROOTDIR)/lib$(TG).exp -o $@ \
 		$(OBJECTS) -W1,-e,_readline_init@12
 else
-	$(CC) -shared $(OBJECTS) $(LIBPATH) $($(TG)_LIBS) -o $@
+	$(CC) -bundle -flat_namespace -isysroot /Developer/SDKs/MacOSX10.6.sdk/ -arch x86_64 $(OBJECTS) $(LIBPATH) $($(TG)_LIBS) -o $@
 endif
 endif
 
