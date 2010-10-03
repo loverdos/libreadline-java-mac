@@ -8,5 +8,9 @@ All the credit for Mac cooking goes to Nathan.
 
 I originally needed the library for the HenPlus SQL-shell (http://henplus.sourceforge.net/)
 
+Note that at the end of the make procedure you have to rename the .so to .jnilib.
+
+Currently compiled for 10.6.4.
+
 Have fun
 Christos KK Loverdos
